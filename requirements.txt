@@ -1,0 +1,7 @@
+mutagen
+pydub
+cloudinary
+python-dotenv
+requests
+imageio-ffmpeg
+static-ffmpeg

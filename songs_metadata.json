@@ -1,0 +1,380 @@
+[
+  {
+    "id": 1,
+    "filename": "03 - Konjit.mp3",
+    "artist": "Mahmoud Ahmed",
+    "title": "Konjit",
+    "album": "Woy Fikir",
+    "year": 1986,
+    "difficulty": "easy",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085633/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_konjit_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085634/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_konjit_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085635/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_konjit_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086291/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_konjit_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086294/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_konjit_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085689/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_konjit_full.mp3"
+    }
+  },
+  {
+    "id": 2,
+    "filename": "05 Bale Garie.mp3",
+    "artist": "Aster Aweke",
+    "title": "Bale Garie",
+    "album": "Ebo",
+    "year": 1986,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788085734/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_bale_garie.bmp",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085698/ethiopian_songs/ethiopian_songs/aster_aweke_bale_garie_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085699/ethiopian_songs/ethiopian_songs/aster_aweke_bale_garie_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085700/ethiopian_songs/ethiopian_songs/aster_aweke_bale_garie_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086407/ethiopian_songs/ethiopian_songs/aster_aweke_bale_garie_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086409/ethiopian_songs/ethiopian_songs/aster_aweke_bale_garie_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085732/ethiopian_songs/ethiopian_songs/aster_aweke_bale_garie_full.mp3"
+    }
+  },
+  {
+    "id": 3,
+    "filename": "06 Esti Lenurbet.mp3",
+    "artist": "Aster Aweke",
+    "title": "Esti Lenurbet",
+    "album": "Ebo",
+    "year": 1986,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788085797/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_esti_lenurbet.bmp",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085742/ethiopian_songs/ethiopian_songs/aster_aweke_esti_lenurbet_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085743/ethiopian_songs/ethiopian_songs/aster_aweke_esti_lenurbet_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085745/ethiopian_songs/ethiopian_songs/aster_aweke_esti_lenurbet_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086457/ethiopian_songs/ethiopian_songs/aster_aweke_esti_lenurbet_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086459/ethiopian_songs/ethiopian_songs/aster_aweke_esti_lenurbet_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085795/ethiopian_songs/ethiopian_songs/aster_aweke_esti_lenurbet_full.mp3"
+    }
+  },
+  {
+    "id": 4,
+    "filename": "08. Aster Aweke - Kehulu Asbelche.mp3",
+    "artist": "Aster Aweke",
+    "title": "Kehulu Asbelche",
+    "album": "Gela Gela: Aster's Ballads #2",
+    "year": 2026,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788086551/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_kehulu_asbelche.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085806/ethiopian_songs/ethiopian_songs/aster_aweke_kehulu_asbelche_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085807/ethiopian_songs/ethiopian_songs/aster_aweke_kehulu_asbelche_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085808/ethiopian_songs/ethiopian_songs/aster_aweke_kehulu_asbelche_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086510/ethiopian_songs/ethiopian_songs/aster_aweke_kehulu_asbelche_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086512/ethiopian_songs/ethiopian_songs/aster_aweke_kehulu_asbelche_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086543/ethiopian_songs/ethiopian_songs/aster_aweke_kehulu_asbelche_full.mp3"
+    }
+  },
+  {
+    "id": 5,
+    "filename": "09_አፄ_ቴዎድሮስ_2ኛ_Theodros_Kassahun.mp3",
+    "artist": "Teddy Afro",
+    "title": "አፄ ቴዎድሮስ 2ኛ",
+    "album": "ETHIOPIA (ኢትዮጵያ)",
+    "year": 2009,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788086613/ethiopian_songs_art/ethiopian_songs_art/teddy_afro_%E1%8A%A0%E1%8D%84_%E1%89%B4%E1%8B%8E%E1%8B%B5%E1%88%AE%E1%88%B5_2%E1%8A%9B.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086559/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%8A%A0%E1%8D%84_%E1%89%B4%E1%8B%8E%E1%8B%B5%E1%88%AE%E1%88%B5_2%E1%8A%9B_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086560/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%8A%A0%E1%8D%84_%E1%89%B4%E1%8B%8E%E1%8B%B5%E1%88%AE%E1%88%B5_2%E1%8A%9B_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086561/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%8A%A0%E1%8D%84_%E1%89%B4%E1%8B%8E%E1%8B%B5%E1%88%AE%E1%88%B5_2%E1%8A%9B_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086563/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%8A%A0%E1%8D%84_%E1%89%B4%E1%8B%8E%E1%8B%B5%E1%88%AE%E1%88%B5_2%E1%8A%9B_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086564/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%8A%A0%E1%8D%84_%E1%89%B4%E1%8B%8E%E1%8B%B5%E1%88%AE%E1%88%B5_2%E1%8A%9B_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086612/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%8A%A0%E1%8D%84_%E1%89%B4%E1%8B%8E%E1%8B%B5%E1%88%AE%E1%88%B5_2%E1%8A%9B_full.mp3"
+    }
+  },
+  {
+    "id": 6,
+    "filename": "7_«ላምባዲና»_Theodros_Kassahun_–YASTESERYAL.mp3",
+    "artist": "TEDDY AFRO",
+    "title": "ላምባዲና",
+    "album": "YASTESERYAL",
+    "year": null,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788085954/ethiopian_songs_art/ethiopian_songs_art/teddy_afro_%E1%88%8B%E1%88%9D%E1%89%A3%E1%8B%B2%E1%8A%93.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086618/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%88%8B%E1%88%9D%E1%89%A3%E1%8B%B2%E1%8A%93_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086619/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%88%8B%E1%88%9D%E1%89%A3%E1%8B%B2%E1%8A%93_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085940/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%88%8B%E1%88%9D%E1%89%A3%E1%8B%B2%E1%8A%93_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086622/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%88%8B%E1%88%9D%E1%89%A3%E1%8B%B2%E1%8A%93_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086624/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%88%8B%E1%88%9D%E1%89%A3%E1%8B%B2%E1%8A%93_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085953/ethiopian_songs/ethiopian_songs/teddy_afro_%E1%88%8B%E1%88%9D%E1%89%A3%E1%8B%B2%E1%8A%93_full.mp3"
+    }
+  },
+  {
+    "id": 7,
+    "filename": "Checheho CD 1 TRACK 12 (320).mp3",
+    "artist": "Aster Aweke",
+    "title": "Gonder",
+    "album": "Checheho",
+    "year": 2010,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788085989/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_gonder.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085963/ethiopian_songs/ethiopian_songs/aster_aweke_gonder_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085964/ethiopian_songs/ethiopian_songs/aster_aweke_gonder_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085965/ethiopian_songs/ethiopian_songs/aster_aweke_gonder_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086667/ethiopian_songs/ethiopian_songs/aster_aweke_gonder_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086668/ethiopian_songs/ethiopian_songs/aster_aweke_gonder_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085988/ethiopian_songs/ethiopian_songs/aster_aweke_gonder_full.mp3"
+    }
+  },
+  {
+    "id": 8,
+    "filename": "Hagere CD 1 TRACK 1 (320).mp3",
+    "artist": "Aster Aweke",
+    "title": "Arada",
+    "album": "Hagere",
+    "year": 1999,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788086035/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_arada.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086006/ethiopian_songs/ethiopian_songs/aster_aweke_arada_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086007/ethiopian_songs/ethiopian_songs/aster_aweke_arada_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086008/ethiopian_songs/ethiopian_songs/aster_aweke_arada_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086718/ethiopian_songs/ethiopian_songs/aster_aweke_arada_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086720/ethiopian_songs/ethiopian_songs/aster_aweke_arada_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086033/ethiopian_songs/ethiopian_songs/aster_aweke_arada_full.mp3"
+    }
+  },
+  {
+    "id": 9,
+    "filename": "Mahmoud Ahmed - anchi bale game.mp3",
+    "artist": "Mahmoud Ahmed",
+    "title": "anchi bale game",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "easy",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086044/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_anchi_bale_game_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086045/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_anchi_bale_game_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086046/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_anchi_bale_game_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086766/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_anchi_bale_game_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086767/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_anchi_bale_game_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086075/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_anchi_bale_game_full.mp3"
+    }
+  },
+  {
+    "id": 10,
+    "filename": "Suger CD 1 TRACK 3 (320).mp3",
+    "artist": "Aster Aweke",
+    "title": "Ezoralehu",
+    "album": "Suger",
+    "year": 2001,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788086851/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_ezoralehu.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086084/ethiopian_songs/ethiopian_songs/aster_aweke_ezoralehu_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086089/ethiopian_songs/ethiopian_songs/aster_aweke_ezoralehu_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086101/ethiopian_songs/ethiopian_songs/aster_aweke_ezoralehu_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086815/ethiopian_songs/ethiopian_songs/aster_aweke_ezoralehu_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086817/ethiopian_songs/ethiopian_songs/aster_aweke_ezoralehu_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086849/ethiopian_songs/ethiopian_songs/aster_aweke_ezoralehu_full.mp3"
+    }
+  },
+  {
+    "id": 11,
+    "filename": "Teddy Afro - Marakiye.mp3",
+    "artist": "Teddy Afro",
+    "title": "Marakiye",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "easy",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086857/ethiopian_songs/ethiopian_songs/teddy_afro_marakiye_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086858/ethiopian_songs/ethiopian_songs/teddy_afro_marakiye_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086859/ethiopian_songs/ethiopian_songs/teddy_afro_marakiye_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086861/ethiopian_songs/ethiopian_songs/teddy_afro_marakiye_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086863/ethiopian_songs/ethiopian_songs/teddy_afro_marakiye_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086894/ethiopian_songs/ethiopian_songs/teddy_afro_marakiye_full.mp3"
+    }
+  },
+  {
+    "id": 12,
+    "filename": "Teddy Afro - Sember.mp3",
+    "artist": "Teddy Afro, Teddy Afro",
+    "title": "Semberé, Semberé",
+    "album": "Ethiopia",
+    "year": 2017,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788086939/ethiopian_songs_art/ethiopian_songs_art/teddy_afro_teddy_afro_sember%C3%A9_sember%C3%A9.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086900/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_sember%C3%A9_sember%C3%A9_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086901/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_sember%C3%A9_sember%C3%A9_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086903/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_sember%C3%A9_sember%C3%A9_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086904/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_sember%C3%A9_sember%C3%A9_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086906/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_sember%C3%A9_sember%C3%A9_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086934/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_sember%C3%A9_sember%C3%A9_full.mp3"
+    }
+  },
+  {
+    "id": 13,
+    "filename": "Teddy Afro - Tenanekegn.mp3",
+    "artist": "Teddy Afro, Teddy Afro",
+    "title": "Tenanekegn, Tenanekegn",
+    "album": "Tikur Sew",
+    "year": 2015,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788086996/ethiopian_songs_art/ethiopian_songs_art/teddy_afro_teddy_afro_tenanekegn_tenanekegn.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086947/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_tenanekegn_tenanekegn_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086948/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_tenanekegn_tenanekegn_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086949/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_tenanekegn_tenanekegn_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086950/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_tenanekegn_tenanekegn_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086952/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_tenanekegn_tenanekegn_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086994/ethiopian_songs/ethiopian_songs/teddy_afro_teddy_afro_tenanekegn_tenanekegn_full.mp3"
+    }
+  },
+  {
+    "id": 14,
+    "filename": "Tew Limed Gelaye  - Mahmoud Ahmed.mp3",
+    "artist": "Tew Limed Gelaye",
+    "title": "Mahmoud Ahmed",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "hard",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087003/ethiopian_songs/ethiopian_songs/tew_limed_gelaye_mahmoud_ahmed_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087004/ethiopian_songs/ethiopian_songs/tew_limed_gelaye_mahmoud_ahmed_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087005/ethiopian_songs/ethiopian_songs/tew_limed_gelaye_mahmoud_ahmed_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087006/ethiopian_songs/ethiopian_songs/tew_limed_gelaye_mahmoud_ahmed_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087008/ethiopian_songs/ethiopian_songs/tew_limed_gelaye_mahmoud_ahmed_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087051/ethiopian_songs/ethiopian_songs/tew_limed_gelaye_mahmoud_ahmed_full.mp3"
+    }
+  },
+  {
+    "id": 15,
+    "filename": "Tilahun gessesse - min tadergiwalesh.mp3",
+    "artist": "Tilahun gessesse",
+    "title": "min tadergiwalesh",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "easy",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087059/ethiopian_songs/ethiopian_songs/tilahun_gessesse_min_tadergiwalesh_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087060/ethiopian_songs/ethiopian_songs/tilahun_gessesse_min_tadergiwalesh_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087061/ethiopian_songs/ethiopian_songs/tilahun_gessesse_min_tadergiwalesh_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087062/ethiopian_songs/ethiopian_songs/tilahun_gessesse_min_tadergiwalesh_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087064/ethiopian_songs/ethiopian_songs/tilahun_gessesse_min_tadergiwalesh_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087096/ethiopian_songs/ethiopian_songs/tilahun_gessesse_min_tadergiwalesh_full.mp3"
+    }
+  },
+  {
+    "id": 16,
+    "filename": "alemahyehu eshetu - Tèmar Ledjé.mp3",
+    "artist": "alemahyehu eshetu",
+    "title": "Tèmar Ledjé",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "hard",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087104/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_t%C3%A8mar_ledj%C3%A9_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087105/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_t%C3%A8mar_ledj%C3%A9_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087106/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_t%C3%A8mar_ledj%C3%A9_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087108/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_t%C3%A8mar_ledj%C3%A9_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087110/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_t%C3%A8mar_ledj%C3%A9_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087131/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_t%C3%A8mar_ledj%C3%A9_full.mp3"
+    }
+  },
+  {
+    "id": 17,
+    "filename": "alemahyehu eshetu - Wededku Afekerku.mp3",
+    "artist": "alemahyehu eshetu",
+    "title": "Wededku Afekerku",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "hard",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087137/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_wededku_afekerku_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087138/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_wededku_afekerku_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087139/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_wededku_afekerku_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087140/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_wededku_afekerku_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087142/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_wededku_afekerku_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087174/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_wededku_afekerku_full.mp3"
+    }
+  },
+  {
+    "id": 18,
+    "filename": "alemahyehu eshetu - Yeweyn haregitu.mp3",
+    "artist": "alemahyehu eshetu",
+    "title": "Yeweyn haregitu",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "hard",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087178/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_yeweyn_haregitu_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087179/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_yeweyn_haregitu_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087180/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_yeweyn_haregitu_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087182/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_yeweyn_haregitu_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087184/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_yeweyn_haregitu_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087208/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_yeweyn_haregitu_full.mp3"
+    }
+  },
+  {
+    "id": 19,
+    "filename": "audio (2).mp3",
+    "artist": "Tilahun Gessesse - Topic",
+    "title": "Yehiwote Hiwot",
+    "album": "Yehiwote Hiwot",
+    "year": 2026,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788087250/ethiopian_songs_art/ethiopian_songs_art/tilahun_gessesse_topic_yehiwote_hiwot.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087214/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_yehiwote_hiwot_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087215/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_yehiwote_hiwot_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087216/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_yehiwote_hiwot_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087218/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_yehiwote_hiwot_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087219/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_yehiwote_hiwot_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087249/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_yehiwote_hiwot_full.mp3"
+    }
+  },
+  {
+    "id": 20,
+    "filename": "audio (4).mp3",
+    "artist": "Tilahun Gessesse - Topic",
+    "title": "Kifu Ayinkash",
+    "album": "Kifu Ayinkash",
+    "year": 2026,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788087319/ethiopian_songs_art/ethiopian_songs_art/tilahun_gessesse_topic_kifu_ayinkash.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087258/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_kifu_ayinkash_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087259/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_kifu_ayinkash_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087260/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_kifu_ayinkash_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087262/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_kifu_ayinkash_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087263/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_kifu_ayinkash_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087318/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_kifu_ayinkash_full.mp3"
+    }
+  },
+  {
+    "id": 21,
+    "filename": "audio.mp3",
+    "artist": "Tilahun Gessesse - Topic",
+    "title": "Teyim Nat",
+    "album": "Teyim Nat",
+    "year": 2026,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788087346/ethiopian_songs_art/ethiopian_songs_art/tilahun_gessesse_topic_teyim_nat.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087323/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_teyim_nat_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087324/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_teyim_nat_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087325/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_teyim_nat_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087326/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_teyim_nat_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087328/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_teyim_nat_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087345/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_teyim_nat_full.mp3"
+    }
+  }
+]

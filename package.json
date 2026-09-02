@@ -1,0 +1,11 @@
+{
+  "name": "zefen-ethiopian-music-game",
+  "version": "1.0.0",
+  "description": "Ethiopian Music Guessing Game - Full Stack Web App",
+  "scripts": {
+    "start:backend": "cd backend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "test": "cd backend && npm test"
+  }
+}
