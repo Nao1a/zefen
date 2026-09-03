@@ -1,5 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { Trophy, Flame, Zap, Award, Target, Users } from 'lucide-react';
 import { getUserProfileApi, getUserHistoryApi } from '../services/api';
+
+function getLevelTitle(level) {
+  if (level >= 8) return 'Grand Maestro 👑';
+  if (level === 7) return 'Zefen Legend 🌟';
+  if (level === 6) return 'Kirar Virtuoso 🎸';
+  if (level === 5) return 'Tilahun Aficionado 🎤';
+  if (level === 4) return 'Ethio-Groove Master 🎧';
+  if (level === 3) return 'Rhythm Fanatic 🎵';
+  if (level === 2) return 'Beat Collector 🥁';
+  return 'Melodic Explorer 🌱';
+}
 
 export default function ProfileView() {
   const [profile, setProfile] = useState(null);
@@ -43,40 +55,59 @@ export default function ProfileView() {
     );
   }
 
+  const userLevel = profile.stats.level || 1;
+  const levelTitle = getLevelTitle(userLevel);
+
   return (
-    <div>
-      <h1 className="page-title">{profile.username}</h1>
+    <div className="profile-container">
+      {/* Profile Header */}
+      <div className="profile-header-card">
+        <div className="avatar-circle profile-avatar">
+          {profile.username.charAt(0).toUpperCase()}
+        </div>
+        <div className="profile-header-info">
+          <h1 className="profile-username">{profile.username}</h1>
+          <div className="level-badge-container">
+            <span className="level-pill">Level {userLevel}</span>
+            <span className="level-title-text">{levelTitle}</span>
+          </div>
+        </div>
+      </div>
 
       {/* Stats grid */}
       <div className="stats-grid">
+        <div className="stat-box highlight-stat">
+          <div className="stat-num">{(profile.stats.totalPoints || 0).toLocaleString()}</div>
+          <div className="stat-lbl"><Trophy size={14} style={{ display: 'inline', marginRight: 4 }} /> Total Points</div>
+        </div>
         <div className="stat-box">
           <div className="stat-num">{(profile.stats.accuracy * 100).toFixed(0)}%</div>
-          <div className="stat-lbl">Accuracy</div>
+          <div className="stat-lbl"><Target size={14} style={{ display: 'inline', marginRight: 4 }} /> Accuracy</div>
+        </div>
+        <div className="stat-box streak-stat">
+          <div className="stat-num">🔥 {profile.stats.dailyStreak || 0}</div>
+          <div className="stat-lbl">Day Streak</div>
+        </div>
+        <div className="stat-box">
+          <div className="stat-num">⚡ {profile.stats.bestDailyStreak || 0}</div>
+          <div className="stat-lbl">Best Day Streak</div>
         </div>
         <div className="stat-box">
           <div className="stat-num">{profile.stats.currentStreak}</div>
-          <div className="stat-lbl">Current Streak</div>
-        </div>
-        <div className="stat-box">
-          <div className="stat-num">{profile.stats.bestStreak}</div>
-          <div className="stat-lbl">Best Streak</div>
+          <div className="stat-lbl">Guess Streak</div>
         </div>
         <div className="stat-box">
           <div className="stat-num">{profile.stats.correctGuesses}</div>
-          <div className="stat-lbl">Correct</div>
+          <div className="stat-lbl">Correct Guesses</div>
         </div>
         <div className="stat-box">
-          <div className="stat-num">{profile.stats.totalGuesses}</div>
-          <div className="stat-lbl">Total Guesses</div>
-        </div>
-        <div className="stat-box">
-          <div className="stat-num">{profile.stats.gamesPlayed}</div>
-          <div className="stat-lbl">Games Played</div>
+          <div className="stat-num">{profile.friendsCount || 0}</div>
+          <div className="stat-lbl"><Users size={14} style={{ display: 'inline', marginRight: 4 }} /> Friends</div>
         </div>
       </div>
 
       {/* Game history */}
-      <h2 style={{ fontSize: 18, fontWeight: 700, marginBottom: 16 }}>Recent History</h2>
+      <h2 style={{ fontSize: 18, fontWeight: 700, margin: '24px 0 16px 0' }}>Recent Game Activity</h2>
 
       {history.length === 0 ? (
         <div className="empty-state">No games played yet.</div>
@@ -90,7 +121,7 @@ export default function ProfileView() {
               </div>
               <div style={{ textAlign: 'right' }}>
                 <span className={item.isCorrect ? 'result-correct' : 'result-incorrect'}>
-                  {item.isCorrect ? 'Correct' : item.revealedAnswer ? 'Revealed' : 'Incorrect'}
+                  {item.isCorrect ? `+${item.pointsEarned || 0} pts` : item.revealedAnswer ? 'Revealed' : 'Incorrect'}
                 </span>
                 <div className="snippet-info">@ {item.snippetLevel}s</div>
               </div>

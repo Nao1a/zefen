@@ -26,8 +26,19 @@ const userSchema = new mongoose.Schema(
       correctGuesses: { type: Number, default: 0 },
       currentStreak: { type: Number, default: 0 },
       bestStreak: { type: Number, default: 0 },
-      gamesPlayed: { type: Number, default: 0 }
+      gamesPlayed: { type: Number, default: 0 },
+      totalPoints: { type: Number, default: 0 },
+      level: { type: Number, default: 1 },
+      dailyStreak: { type: Number, default: 0 },
+      bestDailyStreak: { type: Number, default: 0 },
+      lastDailyStreakDate: { type: String, default: null }
     },
+    friends: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+      }
+    ],
     lastPlayedAt: {
       type: Date
     }

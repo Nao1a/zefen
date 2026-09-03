@@ -77,6 +77,17 @@ export default function GuessAutocomplete({ value, onChange, onSelect, onSubmit 
     setSelectedIndex(-1);
   };
 
+  useEffect(() => {
+    function handleGlobalKeyDown(e) {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        inputRef.current?.focus();
+      }
+    }
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+  }, []);
+
   return (
     <div className="guess-section" ref={containerRef}>
       <div className="search-input-wrapper">
@@ -94,7 +105,7 @@ export default function GuessAutocomplete({ value, onChange, onSelect, onSubmit 
           }}
           onKeyDown={handleKeyDown}
         />
-        {value ? (
+        {value && (
           <button
             type="button"
             className="search-icon-btn"
@@ -108,8 +119,6 @@ export default function GuessAutocomplete({ value, onChange, onSelect, onSubmit 
           >
             <X size={16} />
           </button>
-        ) : (
-          <Search size={18} className="search-icon" />
         )}
       </div>
 
@@ -119,7 +128,10 @@ export default function GuessAutocomplete({ value, onChange, onSelect, onSubmit 
             <div
               key={item.id}
               className={`autocomplete-item ${index === selectedIndex ? 'selected' : ''}`}
-              onClick={() => handleSelectItem(item)}
+              onMouseDown={(e) => {
+                e.preventDefault();
+                handleSelectItem(item);
+              }}
               onMouseEnter={() => setSelectedIndex(index)}
             >
               <div style={{ flex: 1 }}>

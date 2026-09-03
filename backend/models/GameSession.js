@@ -32,6 +32,10 @@ const gameSessionSchema = new mongoose.Schema(
     revealedAnswer: {
       type: Boolean,
       default: false
+    },
+    pointsEarned: {
+      type: Number,
+      default: 0
     }
   },
   {

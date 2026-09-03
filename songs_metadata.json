@@ -6,7 +6,7 @@
     "title": "Konjit",
     "album": "Woy Fikir",
     "year": 1986,
-    "difficulty": "easy",
+    "difficulty": "medium",
     "albumArt": null,
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085633/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_konjit_1.0.mp3",
@@ -24,7 +24,7 @@
     "title": "Bale Garie",
     "album": "Ebo",
     "year": 1986,
-    "difficulty": "easy",
+    "difficulty": "hard",
     "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788085734/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_bale_garie.bmp",
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085698/ethiopian_songs/ethiopian_songs/aster_aweke_bale_garie_1.0.mp3",
@@ -42,7 +42,7 @@
     "title": "Esti Lenurbet",
     "album": "Ebo",
     "year": 1986,
-    "difficulty": "easy",
+    "difficulty": "hard",
     "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788085797/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_esti_lenurbet.bmp",
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085742/ethiopian_songs/ethiopian_songs/aster_aweke_esti_lenurbet_1.0.mp3",
@@ -60,7 +60,7 @@
     "title": "Kehulu Asbelche",
     "album": "Gela Gela: Aster's Ballads #2",
     "year": 2026,
-    "difficulty": "easy",
+    "difficulty": "medium",
     "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788086551/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_kehulu_asbelche.jpg",
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085806/ethiopian_songs/ethiopian_songs/aster_aweke_kehulu_asbelche_1.0.mp3",
@@ -114,7 +114,7 @@
     "title": "Gonder",
     "album": "Checheho",
     "year": 2010,
-    "difficulty": "easy",
+    "difficulty": "hard",
     "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788085989/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_gonder.jpg",
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788085963/ethiopian_songs/ethiopian_songs/aster_aweke_gonder_1.0.mp3",
@@ -132,7 +132,7 @@
     "title": "Arada",
     "album": "Hagere",
     "year": 1999,
-    "difficulty": "easy",
+    "difficulty": "medium",
     "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788086035/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_arada.jpg",
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086006/ethiopian_songs/ethiopian_songs/aster_aweke_arada_1.0.mp3",
@@ -150,7 +150,7 @@
     "title": "anchi bale game",
     "album": "Unknown",
     "year": null,
-    "difficulty": "easy",
+    "difficulty": "hard",
     "albumArt": null,
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086044/ethiopian_songs/ethiopian_songs/mahmoud_ahmed_anchi_bale_game_1.0.mp3",
@@ -168,7 +168,7 @@
     "title": "Ezoralehu",
     "album": "Suger",
     "year": 2001,
-    "difficulty": "easy",
+    "difficulty": "medium",
     "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788086851/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_ezoralehu.jpg",
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086084/ethiopian_songs/ethiopian_songs/aster_aweke_ezoralehu_1.0.mp3",
@@ -186,7 +186,7 @@
     "title": "Marakiye",
     "album": "Unknown",
     "year": null,
-    "difficulty": "easy",
+    "difficulty": "medium",
     "albumArt": null,
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788086857/ethiopian_songs/ethiopian_songs/teddy_afro_marakiye_1.0.mp3",
@@ -258,7 +258,7 @@
     "title": "min tadergiwalesh",
     "album": "Unknown",
     "year": null,
-    "difficulty": "easy",
+    "difficulty": "hard",
     "albumArt": null,
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087059/ethiopian_songs/ethiopian_songs/tilahun_gessesse_min_tadergiwalesh_1.0.mp3",
@@ -294,7 +294,7 @@
     "title": "Wededku Afekerku",
     "album": "Unknown",
     "year": null,
-    "difficulty": "hard",
+    "difficulty": "medium",
     "albumArt": null,
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087137/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_wededku_afekerku_1.0.mp3",
@@ -312,7 +312,7 @@
     "title": "Yeweyn haregitu",
     "album": "Unknown",
     "year": null,
-    "difficulty": "hard",
+    "difficulty": "easy",
     "albumArt": null,
     "snippets": {
       "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087178/ethiopian_songs/ethiopian_songs/alemahyehu_eshetu_yeweyn_haregitu_1.0.mp3",
@@ -375,6 +375,492 @@
       "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087326/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_teyim_nat_8.0.mp3",
       "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087328/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_teyim_nat_10.0.mp3",
       "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788087345/ethiopian_songs/ethiopian_songs/tilahun_gessesse_topic_teyim_nat_full.mp3"
+    }
+  },
+  {
+    "id": 22,
+    "filename": "05 Aster Aweke - Sengno.mp3",
+    "artist": "Aster Aweke",
+    "title": "Sengno",
+    "album": "Aster",
+    "year": 1989,
+    "difficulty": "hard",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359108/ethiopian_songs_art/ethiopian_songs_art/aster_aweke_sengno.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359084/ethiopian_songs/ethiopian_songs/aster_aweke_sengno_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359087/ethiopian_songs/ethiopian_songs/aster_aweke_sengno_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359088/ethiopian_songs/ethiopian_songs/aster_aweke_sengno_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359089/ethiopian_songs/ethiopian_songs/aster_aweke_sengno_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359091/ethiopian_songs/ethiopian_songs/aster_aweke_sengno_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359106/ethiopian_songs/ethiopian_songs/aster_aweke_sengno_full.mp3"
+    }
+  },
+  {
+    "id": 23,
+    "filename": "7 - Jonny Ragga - Pick It Up [@Ethio86 On Telegram].MP3",
+    "artist": "Jonny Ragga",
+    "title": "Pick It Up",
+    "album": "Give Me The Key [@Ethio86 On Telegram]",
+    "year": 2005,
+    "difficulty": "medium",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359137/ethiopian_songs_art/ethiopian_songs_art/jonny_ragga_pick_it_up.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359112/ethiopian_songs/ethiopian_songs/jonny_ragga_pick_it_up_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359118/ethiopian_songs/ethiopian_songs/jonny_ragga_pick_it_up_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359119/ethiopian_songs/ethiopian_songs/jonny_ragga_pick_it_up_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359120/ethiopian_songs/ethiopian_songs/jonny_ragga_pick_it_up_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359122/ethiopian_songs/ethiopian_songs/jonny_ragga_pick_it_up_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359133/ethiopian_songs/ethiopian_songs/jonny_ragga_pick_it_up_full.mp3"
+    }
+  },
+  {
+    "id": 24,
+    "filename": "9 - Jonny Ragga - Habeshawi [@Ethio86 On Telegram].MP3",
+    "artist": "Jonny Ragga",
+    "title": "Habeshawi",
+    "album": "Give Me The Key [@Ethio86 On Telegram]",
+    "year": 2005,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359162/ethiopian_songs_art/ethiopian_songs_art/jonny_ragga_habeshawi.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359143/ethiopian_songs/ethiopian_songs/jonny_ragga_habeshawi_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359143/ethiopian_songs/ethiopian_songs/jonny_ragga_habeshawi_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359145/ethiopian_songs/ethiopian_songs/jonny_ragga_habeshawi_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359146/ethiopian_songs/ethiopian_songs/jonny_ragga_habeshawi_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359147/ethiopian_songs/ethiopian_songs/jonny_ragga_habeshawi_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359159/ethiopian_songs/ethiopian_songs/jonny_ragga_habeshawi_full.mp3"
+    }
+  },
+  {
+    "id": 25,
+    "filename": "9. Get to Work.mp3",
+    "artist": "Rophnan",
+    "title": "Get to Work",
+    "album": "Reflection",
+    "year": 2018,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359189/ethiopian_songs_art/ethiopian_songs_art/rophnan_get_to_work.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359170/ethiopian_songs/ethiopian_songs/rophnan_get_to_work_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359171/ethiopian_songs/ethiopian_songs/rophnan_get_to_work_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359172/ethiopian_songs/ethiopian_songs/rophnan_get_to_work_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359173/ethiopian_songs/ethiopian_songs/rophnan_get_to_work_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359175/ethiopian_songs/ethiopian_songs/rophnan_get_to_work_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359188/ethiopian_songs/ethiopian_songs/rophnan_get_to_work_full.mp3"
+    }
+  },
+  {
+    "id": 26,
+    "filename": "Ene Aydelehum CD 1 TRACK 2 (320).mp3",
+    "artist": "Girma Tefera Kassa",
+    "title": "Like Endayehush",
+    "album": "Ene Aydelehum",
+    "year": 2016,
+    "difficulty": "medium",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359226/ethiopian_songs_art/ethiopian_songs_art/girma_tefera_kassa_like_endayehush.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359197/ethiopian_songs/ethiopian_songs/girma_tefera_kassa_like_endayehush_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359198/ethiopian_songs/ethiopian_songs/girma_tefera_kassa_like_endayehush_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359199/ethiopian_songs/ethiopian_songs/girma_tefera_kassa_like_endayehush_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359200/ethiopian_songs/ethiopian_songs/girma_tefera_kassa_like_endayehush_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359202/ethiopian_songs/ethiopian_songs/girma_tefera_kassa_like_endayehush_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359224/ethiopian_songs/ethiopian_songs/girma_tefera_kassa_like_endayehush_full.mp3"
+    }
+  },
+  {
+    "id": 27,
+    "filename": "Eshururu   Lij Michael.mp3",
+    "artist": "Unknown",
+    "title": "Eshururu   Lij Michael",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "medium",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359231/ethiopian_songs/ethiopian_songs/unknown_eshururu_lij_michael_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359232/ethiopian_songs/ethiopian_songs/unknown_eshururu_lij_michael_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359233/ethiopian_songs/ethiopian_songs/unknown_eshururu_lij_michael_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359234/ethiopian_songs/ethiopian_songs/unknown_eshururu_lij_michael_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359236/ethiopian_songs/ethiopian_songs/unknown_eshururu_lij_michael_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359250/ethiopian_songs/ethiopian_songs/unknown_eshururu_lij_michael_full.mp3"
+    }
+  },
+  {
+    "id": 28,
+    "filename": "Etiege   Teddy Afro.mp3",
+    "artist": "Unknown",
+    "title": "Etiege   Teddy Afro",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "easy",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359256/ethiopian_songs/ethiopian_songs/unknown_etiege_teddy_afro_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359259/ethiopian_songs/ethiopian_songs/unknown_etiege_teddy_afro_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359260/ethiopian_songs/ethiopian_songs/unknown_etiege_teddy_afro_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359262/ethiopian_songs/ethiopian_songs/unknown_etiege_teddy_afro_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359263/ethiopian_songs/ethiopian_songs/unknown_etiege_teddy_afro_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359285/ethiopian_songs/ethiopian_songs/unknown_etiege_teddy_afro_full.mp3"
+    }
+  },
+  {
+    "id": 29,
+    "filename": "Konjo Mewded   Selamawit Gebru.mp3",
+    "artist": "Unknown",
+    "title": "Konjo Mewded   Selamawit Gebru",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "easy",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359291/ethiopian_songs/ethiopian_songs/unknown_konjo_mewded_selamawit_gebru_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359292/ethiopian_songs/ethiopian_songs/unknown_konjo_mewded_selamawit_gebru_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359293/ethiopian_songs/ethiopian_songs/unknown_konjo_mewded_selamawit_gebru_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359294/ethiopian_songs/ethiopian_songs/unknown_konjo_mewded_selamawit_gebru_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359296/ethiopian_songs/ethiopian_songs/unknown_konjo_mewded_selamawit_gebru_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359314/ethiopian_songs/ethiopian_songs/unknown_konjo_mewded_selamawit_gebru_full.mp3"
+    }
+  },
+  {
+    "id": 30,
+    "filename": "Kuku Sebsibe - Negeru Endiet New.mp3",
+    "artist": "Kuku Sebsibe",
+    "title": "Negeru Endiet New",
+    "album": "Tinish Gizie Sitegne",
+    "year": 2003,
+    "difficulty": "medium",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359344/ethiopian_songs_art/ethiopian_songs_art/kuku_sebsibe_negeru_endiet_new.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359320/ethiopian_songs/ethiopian_songs/kuku_sebsibe_negeru_endiet_new_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359321/ethiopian_songs/ethiopian_songs/kuku_sebsibe_negeru_endiet_new_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359322/ethiopian_songs/ethiopian_songs/kuku_sebsibe_negeru_endiet_new_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359324/ethiopian_songs/ethiopian_songs/kuku_sebsibe_negeru_endiet_new_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359325/ethiopian_songs/ethiopian_songs/kuku_sebsibe_negeru_endiet_new_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359342/ethiopian_songs/ethiopian_songs/kuku_sebsibe_negeru_endiet_new_full.mp3"
+    }
+  },
+  {
+    "id": 31,
+    "filename": "Lebe   Helen Berhe.mp3",
+    "artist": "Unknown",
+    "title": "Lebe   Helen Berhe",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "medium",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359349/ethiopian_songs/ethiopian_songs/unknown_lebe_helen_berhe_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359351/ethiopian_songs/ethiopian_songs/unknown_lebe_helen_berhe_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359352/ethiopian_songs/ethiopian_songs/unknown_lebe_helen_berhe_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359354/ethiopian_songs/ethiopian_songs/unknown_lebe_helen_berhe_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359355/ethiopian_songs/ethiopian_songs/unknown_lebe_helen_berhe_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359374/ethiopian_songs/ethiopian_songs/unknown_lebe_helen_berhe_full.mp3"
+    }
+  },
+  {
+    "id": 32,
+    "filename": "Lesergua Teterahu   Tsegaye Eshetu.mp3",
+    "artist": "Unknown",
+    "title": "Lesergua Teterahu   Tsegaye Eshetu",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "medium",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359381/ethiopian_songs/ethiopian_songs/unknown_lesergua_teterahu_tsegaye_eshetu_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359383/ethiopian_songs/ethiopian_songs/unknown_lesergua_teterahu_tsegaye_eshetu_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359384/ethiopian_songs/ethiopian_songs/unknown_lesergua_teterahu_tsegaye_eshetu_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359385/ethiopian_songs/ethiopian_songs/unknown_lesergua_teterahu_tsegaye_eshetu_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359386/ethiopian_songs/ethiopian_songs/unknown_lesergua_teterahu_tsegaye_eshetu_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359405/ethiopian_songs/ethiopian_songs/unknown_lesergua_teterahu_tsegaye_eshetu_full.mp3"
+    }
+  },
+  {
+    "id": 33,
+    "filename": "Mikiya 02.mp3",
+    "artist": "Mikaya Behailu",
+    "title": "Lante Sil",
+    "album": "Shemametew",
+    "year": 2007,
+    "difficulty": "medium",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359410/ethiopian_songs/ethiopian_songs/mikaya_behailu_lante_sil_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359411/ethiopian_songs/ethiopian_songs/mikaya_behailu_lante_sil_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359412/ethiopian_songs/ethiopian_songs/mikaya_behailu_lante_sil_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359414/ethiopian_songs/ethiopian_songs/mikaya_behailu_lante_sil_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359415/ethiopian_songs/ethiopian_songs/mikaya_behailu_lante_sil_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359426/ethiopian_songs/ethiopian_songs/mikaya_behailu_lante_sil_full.mp3"
+    }
+  },
+  {
+    "id": 34,
+    "filename": "Mikiya 03.mp3",
+    "artist": "Mikaya Behailu",
+    "title": "Sebeb",
+    "album": "Shemametew",
+    "year": 2007,
+    "difficulty": "easy",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359435/ethiopian_songs/ethiopian_songs/mikaya_behailu_sebeb_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359436/ethiopian_songs/ethiopian_songs/mikaya_behailu_sebeb_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359437/ethiopian_songs/ethiopian_songs/mikaya_behailu_sebeb_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359439/ethiopian_songs/ethiopian_songs/mikaya_behailu_sebeb_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359440/ethiopian_songs/ethiopian_songs/mikaya_behailu_sebeb_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359463/ethiopian_songs/ethiopian_songs/mikaya_behailu_sebeb_full.mp3"
+    }
+  },
+  {
+    "id": 35,
+    "filename": "Mikiya 05.mp3",
+    "artist": "Mikaya Behailu",
+    "title": "Honeleign",
+    "album": "Shemametew",
+    "year": 2007,
+    "difficulty": "medium",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359468/ethiopian_songs/ethiopian_songs/mikaya_behailu_honeleign_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359469/ethiopian_songs/ethiopian_songs/mikaya_behailu_honeleign_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359471/ethiopian_songs/ethiopian_songs/mikaya_behailu_honeleign_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359472/ethiopian_songs/ethiopian_songs/mikaya_behailu_honeleign_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359473/ethiopian_songs/ethiopian_songs/mikaya_behailu_honeleign_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359484/ethiopian_songs/ethiopian_songs/mikaya_behailu_honeleign_full.mp3"
+    }
+  },
+  {
+    "id": 36,
+    "filename": "Mikiya 09.mp3",
+    "artist": "Mikaya Behailu",
+    "title": "Deleleign",
+    "album": "Shemametew",
+    "year": 2007,
+    "difficulty": "medium",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359491/ethiopian_songs/ethiopian_songs/mikaya_behailu_deleleign_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359492/ethiopian_songs/ethiopian_songs/mikaya_behailu_deleleign_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359493/ethiopian_songs/ethiopian_songs/mikaya_behailu_deleleign_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359494/ethiopian_songs/ethiopian_songs/mikaya_behailu_deleleign_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359499/ethiopian_songs/ethiopian_songs/mikaya_behailu_deleleign_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359519/ethiopian_songs/ethiopian_songs/mikaya_behailu_deleleign_full.mp3"
+    }
+  },
+  {
+    "id": 37,
+    "filename": "Nigusuu Taammiraat - Askottu Asiin Jira.mp3",
+    "artist": "Nigusuu Taammiraat",
+    "title": "Askottu Asiin Jira",
+    "album": "Haadhakoo",
+    "year": 2016,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359546/ethiopian_songs_art/ethiopian_songs_art/nigusuu_taammiraat_askottu_asiin_jira.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359524/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_askottu_asiin_jira_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359525/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_askottu_asiin_jira_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359527/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_askottu_asiin_jira_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359528/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_askottu_asiin_jira_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359529/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_askottu_asiin_jira_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359545/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_askottu_asiin_jira_full.mp3"
+    }
+  },
+  {
+    "id": 38,
+    "filename": "Nigusuu Taammiraat - Yaannikoo Sibira.mp3",
+    "artist": "Nigusuu Taammiraat",
+    "title": "Yaannikoo Sibira",
+    "album": "Haadhakoo",
+    "year": 2016,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359575/ethiopian_songs_art/ethiopian_songs_art/nigusuu_taammiraat_yaannikoo_sibira.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359552/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_yaannikoo_sibira_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359553/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_yaannikoo_sibira_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359554/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_yaannikoo_sibira_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359555/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_yaannikoo_sibira_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359556/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_yaannikoo_sibira_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359574/ethiopian_songs/ethiopian_songs/nigusuu_taammiraat_yaannikoo_sibira_full.mp3"
+    }
+  },
+  {
+    "id": 39,
+    "filename": "Rophnan - PELE [@Ethio86 on telegram] (3).mp3",
+    "artist": "Rophnan",
+    "title": "PELE",
+    "album": "ZETEGN | NOR [@Ethio86 On Telegram]",
+    "year": 2024,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359604/ethiopian_songs_art/ethiopian_songs_art/rophnan_pele.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359581/ethiopian_songs/ethiopian_songs/rophnan_pele_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359582/ethiopian_songs/ethiopian_songs/rophnan_pele_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359583/ethiopian_songs/ethiopian_songs/rophnan_pele_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359584/ethiopian_songs/ethiopian_songs/rophnan_pele_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359586/ethiopian_songs/ethiopian_songs/rophnan_pele_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359601/ethiopian_songs/ethiopian_songs/rophnan_pele_full.mp3"
+    }
+  },
+  {
+    "id": 40,
+    "filename": "Rophnan - SEALIW [@Ethio86 on telegram].mp3",
+    "artist": "Rophnan",
+    "title": "SEALIW",
+    "album": "ZETEGN | HARAMBE [@Ethio86 On Telegram]",
+    "year": 2024,
+    "difficulty": "hard",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359633/ethiopian_songs_art/ethiopian_songs_art/rophnan_sealiw.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359611/ethiopian_songs/ethiopian_songs/rophnan_sealiw_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359612/ethiopian_songs/ethiopian_songs/rophnan_sealiw_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359613/ethiopian_songs/ethiopian_songs/rophnan_sealiw_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359615/ethiopian_songs/ethiopian_songs/rophnan_sealiw_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359616/ethiopian_songs/ethiopian_songs/rophnan_sealiw_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359631/ethiopian_songs/ethiopian_songs/rophnan_sealiw_full.mp3"
+    }
+  },
+  {
+    "id": 41,
+    "filename": "Rophnan - SHEGIYE [@Ethio86 on telegram] (3).mp3",
+    "artist": "Rophnan",
+    "title": "SHEGIYE",
+    "album": "ZETEGN | NOR [@Ethio86 On Telegram]",
+    "year": 2024,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359656/ethiopian_songs_art/ethiopian_songs_art/rophnan_shegiye.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359638/ethiopian_songs/ethiopian_songs/rophnan_shegiye_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359639/ethiopian_songs/ethiopian_songs/rophnan_shegiye_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359640/ethiopian_songs/ethiopian_songs/rophnan_shegiye_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359641/ethiopian_songs/ethiopian_songs/rophnan_shegiye_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359643/ethiopian_songs/ethiopian_songs/rophnan_shegiye_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359653/ethiopian_songs/ethiopian_songs/rophnan_shegiye_full.mp3"
+    }
+  },
+  {
+    "id": 42,
+    "filename": "Rophnan - TAMRIYALESH [@Ethio86 on telegram].mp3",
+    "artist": "Rophnan",
+    "title": "TAMRIYALESH",
+    "album": "ZETEGN | HARAMBE [@Ethio86 On Telegram]",
+    "year": 2024,
+    "difficulty": "medium",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359680/ethiopian_songs_art/ethiopian_songs_art/rophnan_tamriyalesh.png",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359661/ethiopian_songs/ethiopian_songs/rophnan_tamriyalesh_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359662/ethiopian_songs/ethiopian_songs/rophnan_tamriyalesh_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359663/ethiopian_songs/ethiopian_songs/rophnan_tamriyalesh_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359665/ethiopian_songs/ethiopian_songs/rophnan_tamriyalesh_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359666/ethiopian_songs/ethiopian_songs/rophnan_tamriyalesh_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359677/ethiopian_songs/ethiopian_songs/rophnan_tamriyalesh_full.mp3"
+    }
+  },
+  {
+    "id": 43,
+    "filename": "Salaysh   Bezuayehu Demissie.mp3",
+    "artist": "Unknown",
+    "title": "Salaysh   Bezuayehu Demissie",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "hard",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359686/ethiopian_songs/ethiopian_songs/unknown_salaysh_bezuayehu_demissie_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359686/ethiopian_songs/ethiopian_songs/unknown_salaysh_bezuayehu_demissie_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359688/ethiopian_songs/ethiopian_songs/unknown_salaysh_bezuayehu_demissie_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359689/ethiopian_songs/ethiopian_songs/unknown_salaysh_bezuayehu_demissie_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359691/ethiopian_songs/ethiopian_songs/unknown_salaysh_bezuayehu_demissie_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359707/ethiopian_songs/ethiopian_songs/unknown_salaysh_bezuayehu_demissie_full.mp3"
+    }
+  },
+  {
+    "id": 44,
+    "filename": "Sayat Demissie - 03 - Hasabun Mesrek.mp3",
+    "artist": "Sayat Demissie",
+    "title": "Hasabun Mesrek",
+    "album": "Kihe 3, Vol.1",
+    "year": 2011,
+    "difficulty": "medium",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359713/ethiopian_songs/ethiopian_songs/sayat_demissie_hasabun_mesrek_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359714/ethiopian_songs/ethiopian_songs/sayat_demissie_hasabun_mesrek_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359715/ethiopian_songs/ethiopian_songs/sayat_demissie_hasabun_mesrek_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359716/ethiopian_songs/ethiopian_songs/sayat_demissie_hasabun_mesrek_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359718/ethiopian_songs/ethiopian_songs/sayat_demissie_hasabun_mesrek_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359731/ethiopian_songs/ethiopian_songs/sayat_demissie_hasabun_mesrek_full.mp3"
+    }
+  },
+  {
+    "id": 45,
+    "filename": "Sew Mekrosh - Tamrat Desta (128).mp3",
+    "artist": "Tamrat Desta",
+    "title": "Sew Mekrosh",
+    "album": "Kanchi Aybeltem",
+    "year": 2008,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359759/ethiopian_songs_art/ethiopian_songs_art/tamrat_desta_sew_mekrosh.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359737/ethiopian_songs/ethiopian_songs/tamrat_desta_sew_mekrosh_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359738/ethiopian_songs/ethiopian_songs/tamrat_desta_sew_mekrosh_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359740/ethiopian_songs/ethiopian_songs/tamrat_desta_sew_mekrosh_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359742/ethiopian_songs/ethiopian_songs/tamrat_desta_sew_mekrosh_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359743/ethiopian_songs/ethiopian_songs/tamrat_desta_sew_mekrosh_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359758/ethiopian_songs/ethiopian_songs/tamrat_desta_sew_mekrosh_full.mp3"
+    }
+  },
+  {
+    "id": 46,
+    "filename": "Tamrat Desta - Lijemregne New.mp3",
+    "artist": "Tamrat Desta",
+    "title": "Lijemregne New",
+    "album": "Keza Sefer",
+    "year": 2014,
+    "difficulty": "easy",
+    "albumArt": "https://res.cloudinary.com/dvy9qkvx2/image/upload/v1788359781/ethiopian_songs_art/ethiopian_songs_art/tamrat_desta_lijemregne_new.jpg",
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359764/ethiopian_songs/ethiopian_songs/tamrat_desta_lijemregne_new_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359765/ethiopian_songs/ethiopian_songs/tamrat_desta_lijemregne_new_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359767/ethiopian_songs/ethiopian_songs/tamrat_desta_lijemregne_new_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359769/ethiopian_songs/ethiopian_songs/tamrat_desta_lijemregne_new_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359770/ethiopian_songs/ethiopian_songs/tamrat_desta_lijemregne_new_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359780/ethiopian_songs/ethiopian_songs/tamrat_desta_lijemregne_new_full.mp3"
+    }
+  },
+  {
+    "id": 47,
+    "filename": "Wondimu_Jira_-_Kanchi_Gar(128k).mp3",
+    "artist": "Wondimu",
+    "title": "Jira - Kanchi Gar(128K)",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "easy",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359787/ethiopian_songs/ethiopian_songs/wondimu_jira_kanchi_gar128k_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359788/ethiopian_songs/ethiopian_songs/wondimu_jira_kanchi_gar128k_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359789/ethiopian_songs/ethiopian_songs/wondimu_jira_kanchi_gar128k_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359790/ethiopian_songs/ethiopian_songs/wondimu_jira_kanchi_gar128k_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359792/ethiopian_songs/ethiopian_songs/wondimu_jira_kanchi_gar128k_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359805/ethiopian_songs/ethiopian_songs/wondimu_jira_kanchi_gar128k_full.mp3"
+    }
+  },
+  {
+    "id": 48,
+    "filename": "Yene Konjo   Bezuayehu Demissie.mp3",
+    "artist": "Unknown",
+    "title": "Yene Konjo   Bezuayehu Demissie",
+    "album": "Unknown",
+    "year": null,
+    "difficulty": "medium",
+    "albumArt": null,
+    "snippets": {
+      "1.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359811/ethiopian_songs/ethiopian_songs/unknown_yene_konjo_bezuayehu_demissie_1.0.mp3",
+      "2.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359812/ethiopian_songs/ethiopian_songs/unknown_yene_konjo_bezuayehu_demissie_2.0.mp3",
+      "4.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359813/ethiopian_songs/ethiopian_songs/unknown_yene_konjo_bezuayehu_demissie_4.0.mp3",
+      "8.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359814/ethiopian_songs/ethiopian_songs/unknown_yene_konjo_bezuayehu_demissie_8.0.mp3",
+      "10.0": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359815/ethiopian_songs/ethiopian_songs/unknown_yene_konjo_bezuayehu_demissie_10.0.mp3",
+      "full": "https://res.cloudinary.com/dvy9qkvx2/video/upload/v1788359831/ethiopian_songs/ethiopian_songs/unknown_yene_konjo_bezuayehu_demissie_full.mp3"
     }
   }
 ]

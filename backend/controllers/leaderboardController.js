@@ -6,11 +6,13 @@ const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
 async function recalculateLeaderboard() {
   const allUsers = await User.find({ 'stats.totalGuesses': { $gt: 0 } }).lean();
 
-  const formattedUsers = allUsers.map((user) => {
+  let formattedUsers = allUsers.map((user) => {
     const total = user.stats ? user.stats.totalGuesses || 0 : 0;
     const correct = user.stats ? user.stats.correctGuesses || 0 : 0;
     const currentStreak = user.stats ? user.stats.currentStreak || 0 : 0;
     const bestStreak = user.stats ? user.stats.bestStreak || 0 : 0;
+    const totalPoints = user.stats ? user.stats.totalPoints || 0 : 0;
+    const level = user.stats ? user.stats.level || 1 : 1;
     const accuracy = total > 0 ? parseFloat((correct / total).toFixed(2)) : 0;
 
     return {
@@ -20,12 +22,17 @@ async function recalculateLeaderboard() {
       totalGuesses: total,
       accuracy,
       currentStreak,
-      bestStreak
+      bestStreak,
+      totalPoints,
+      level
     };
   });
 
-  // Sort by accuracy descending, then by bestStreak descending
+  // Sort by totalPoints descending, then accuracy descending, then bestStreak descending
   formattedUsers.sort((a, b) => {
+    if (b.totalPoints !== a.totalPoints) {
+      return b.totalPoints - a.totalPoints;
+    }
     if (b.accuracy !== a.accuracy) {
       return b.accuracy - a.accuracy;
     }
@@ -51,16 +58,34 @@ async function recalculateLeaderboard() {
 }
 
 async function getLeaderboardData() {
-  let cache = await LeaderboardCache.findOne({ cacheKey: 'current' });
+  const isMongoConnected = require('mongoose').connection.readyState === 1;
 
-  const now = new Date().getTime();
-  const isStale = !cache || (now - new Date(cache.lastUpdatedAt).getTime()) > CACHE_TTL_MS;
-
-  if (isStale) {
-    cache = await recalculateLeaderboard();
+  if (!isMongoConnected) {
+    return {
+      topPlayers: [],
+      lastUpdatedAt: new Date(),
+      totalPlayersOnLeaderboard: 0
+    };
   }
 
-  return cache;
+  try {
+    let cache = await LeaderboardCache.findOne({ cacheKey: 'current' });
+
+    const now = new Date().getTime();
+    const isStale = !cache || (now - new Date(cache.lastUpdatedAt).getTime()) > CACHE_TTL_MS;
+
+    if (isStale) {
+      cache = await recalculateLeaderboard();
+    }
+
+    return cache;
+  } catch (err) {
+    return {
+      topPlayers: [],
+      lastUpdatedAt: new Date(),
+      totalPlayersOnLeaderboard: 0
+    };
+  }
 }
 
 async function getLeaderboard(req, res, next) {
@@ -69,11 +94,27 @@ async function getLeaderboard(req, res, next) {
     const limit = Math.min(Math.max(limitQuery, 1), 100);
 
     const cache = await getLeaderboardData();
+    let topPlayers = cache.topPlayers;
 
-    const topPlayers = cache.topPlayers.slice(0, limit);
+    // Filter by friends if type === 'friends' and req.userId exists and mongo is connected
+    if (req.query.type === 'friends' && req.userId && require('mongoose').connection.readyState === 1) {
+      try {
+        const currentUser = await User.findById(req.userId).populate('friends').lean();
+        if (currentUser) {
+          const friendIds = new Set((currentUser.friends || []).map((f) => f._id.toString()));
+          friendIds.add(currentUser._id.toString());
+
+          topPlayers = topPlayers.filter((player) =>
+            friendIds.has(player.userId.toString())
+          );
+        }
+      } catch (e) {}
+    }
+
+    const sliced = topPlayers.slice(0, limit);
 
     return res.status(200).json({
-      leaderboard: topPlayers,
+      leaderboard: sliced,
       generatedAt: cache.lastUpdatedAt,
       totalPlayers: cache.totalPlayersOnLeaderboard
     });
@@ -101,11 +142,12 @@ async function getUserRank(req, res, next) {
         accuracy: playerInLeaderboard.accuracy,
         currentStreak: playerInLeaderboard.currentStreak,
         bestStreak: playerInLeaderboard.bestStreak,
+        totalPoints: playerInLeaderboard.totalPoints || 0,
+        level: playerInLeaderboard.level || 1,
         totalPlayersRanked: cache.totalPlayersOnLeaderboard
       });
     }
 
-    // Check if user exists in db
     const user = await User.findById(userId);
     return res.status(200).json({
       userId,
@@ -121,5 +163,6 @@ async function getUserRank(req, res, next) {
 
 module.exports = {
   getLeaderboard,
-  getUserRank
+  getUserRank,
+  recalculateLeaderboard
 };

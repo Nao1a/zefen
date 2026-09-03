@@ -114,16 +114,77 @@ export async function getUserHistoryApi(limit = 20) {
   return data;
 }
 
-export async function getLeaderboardApi(limit = 100) {
-  const res = await fetch(`${API_BASE}/leaderboard?limit=${limit}`);
+export async function getLeaderboardApi(limit = 100, type = 'global') {
+  const queryParams = new URLSearchParams({ limit, type });
+  const res = await fetch(`${API_BASE}/leaderboard?${queryParams.toString()}`, {
+    headers: getAuthHeader()
+  });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Failed to fetch leaderboard');
   return data;
 }
 
 export async function getUserRankApi(userId) {
-  const res = await fetch(`${API_BASE}/leaderboard/${userId}/rank`);
+  const res = await fetch(`${API_BASE}/leaderboard/${userId}/rank`, {
+    headers: getAuthHeader()
+  });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Failed to fetch user rank');
+  return data;
+}
+
+export async function searchUsersApi(query) {
+  if (!query || query.trim().length === 0) return [];
+  const res = await fetch(`${API_BASE}/user/search?q=${encodeURIComponent(query)}`, {
+    headers: getAuthHeader()
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to search users');
+  return data.results || [];
+}
+
+export async function addFriendApi(friendId) {
+  const res = await fetch(`${API_BASE}/user/friends/add`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...getAuthHeader()
+    },
+    body: JSON.stringify({ friendId })
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to add friend');
+  return data;
+}
+
+export async function removeFriendApi(friendId) {
+  const res = await fetch(`${API_BASE}/user/friends/remove`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...getAuthHeader()
+    },
+    body: JSON.stringify({ friendId })
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to remove friend');
+  return data;
+}
+
+export async function getFriendsApi() {
+  const res = await fetch(`${API_BASE}/user/friends`, {
+    headers: getAuthHeader()
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to fetch friends');
+  return data.friends || [];
+}
+
+export async function compareUserStatsApi(targetUserId) {
+  const res = await fetch(`${API_BASE}/user/compare/${targetUserId}`, {
+    headers: getAuthHeader()
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Failed to compare user stats');
   return data;
 }

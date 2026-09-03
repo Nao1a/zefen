@@ -31,6 +31,14 @@ const playerRankSchema = new mongoose.Schema(
       type: Number,
       default: 0
     },
+    totalPoints: {
+      type: Number,
+      default: 0
+    },
+    level: {
+      type: Number,
+      default: 1
+    },
     rank: {
       type: Number,
       required: true

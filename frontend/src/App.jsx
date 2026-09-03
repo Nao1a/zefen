@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
-import { Play, Square, RotateCcw, CheckCircle, XCircle, Menu, SkipForward, Volume2 } from 'lucide-react';
+import { Play, Square, RotateCcw, CheckCircle, XCircle, Menu, SkipForward, Volume2, Award, Zap, Eye, Github, Globe } from 'lucide-react';
 
 import Sidebar from './components/Sidebar';
 import AudioSnippetPlayer from './components/AudioSnippetPlayer';
 import GuessAutocomplete from './components/GuessAutocomplete';
 import LeaderboardView from './components/LeaderboardView';
 import ProfileView from './components/ProfileView';
+import FriendsView from './components/FriendsView';
+import CompareModal from './components/CompareModal';
 import AuthModal from './components/AuthModal';
 
 import {
@@ -45,11 +47,16 @@ export default function App() {
   const [gameState, setGameState] = useState('playing'); // 'playing', 'correct', 'revealed', 'incorrect'
   const [gameResult, setGameResult] = useState(null);
   const [currentStreak, setCurrentStreak] = useState(0);
+  const [dailyStreak, setDailyStreak] = useState(0);
+  const [totalPoints, setTotalPoints] = useState(0);
+  const [level, setLevel] = useState(1);
+  const [pointsToast, setPointsToast] = useState(null);
 
   const [activeView, setActiveView] = useState('game');
   const [showAuth, setShowAuth] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [compareTargetUser, setCompareTargetUser] = useState(null);
 
   useEffect(() => {
     const token = localStorage.getItem('zefen_token');
@@ -59,6 +66,9 @@ export default function App() {
           setUser(userData);
           if (userData.stats) {
             setCurrentStreak(userData.stats.currentStreak || 0);
+            setDailyStreak(userData.stats.dailyStreak || 0);
+            setTotalPoints(userData.stats.totalPoints || 0);
+            setLevel(userData.stats.level || 1);
           }
         })
         .catch(() => {
@@ -79,11 +89,11 @@ export default function App() {
       setGuessInput('');
       setSelectedSongObj(null);
       setCurrentLevelIndex(0);
+      setPointsToast(null);
 
       const songData = await getRandomSong(diff, currentPlayed);
       setCurrentSong(songData);
 
-      // Track played song IDs to prevent repetition
       const updatedPlayed = Array.from(new Set([...currentPlayed, songData.id]));
       setPlayedSongIds(updatedPlayed);
       try {
@@ -96,7 +106,6 @@ export default function App() {
         songSnippets = snippetData.snippets || {};
       }
       setSnippets(songSnippets);
-      // Preload all snippets (1s, 2s, 4s, 8s, 10s, full) in background for instant 0ms playback
       audioPlayer.preloadSnippets(songSnippets);
     } catch (err) {
       console.error('Error loading song:', err);
@@ -124,7 +133,6 @@ export default function App() {
     setIsFullPlaying(false);
   };
 
-  // Skip to next duration
   const handleSkipToNext = () => {
     audioPlayer.stop();
     setIsPlaying(false);
@@ -132,14 +140,12 @@ export default function App() {
     if (currentLevelIndex < SNIPPET_LEVEL_KEYS.length - 1) {
       const nextIdx = currentLevelIndex + 1;
       setCurrentLevelIndex(nextIdx);
-      // Automatically play the new longer snippet
       setTimeout(() => {
         handlePlaySnippet(nextIdx);
       }, 50);
     }
   };
 
-  // Jump to specific level when clicking snippet step
   const handleSelectLevel = (idx) => {
     audioPlayer.stop();
     setIsPlaying(false);
@@ -149,7 +155,6 @@ export default function App() {
     }, 50);
   };
 
-  // Play full song on victory or reveal
   const handlePlayFullSong = () => {
     const fullUrl = gameResult?.song?.fullAudioUrl || snippets?.full || currentSong?.snippets?.full;
     if (!fullUrl) return;
@@ -183,11 +188,20 @@ export default function App() {
 
       if (result.correct) {
         setGameState('correct');
-        const nextStreak = user ? (result.userStats?.currentStreak || 0) : currentStreak + 1;
-        setCurrentStreak(nextStreak);
+        const earned = result.pointsEarned || (currentLevelIndex === 0 ? 1000 : 500);
+        setPointsToast(earned);
         triggerConfetti();
 
-        // Auto-play full song on correct guess
+        if (user && result.userStats) {
+          setCurrentStreak(result.userStats.currentStreak || 0);
+          setDailyStreak(result.userStats.dailyStreak || 0);
+          setTotalPoints(result.userStats.totalPoints || 0);
+          setLevel(result.userStats.level || 1);
+        } else {
+          setCurrentStreak((prev) => prev + 1);
+          setTotalPoints((prev) => prev + earned);
+        }
+
         const fullUrl = result.song?.fullAudioUrl || snippets.full;
         if (fullUrl) {
           setIsFullPlaying(true);
@@ -225,7 +239,6 @@ export default function App() {
       setGameState('revealed');
       setCurrentStreak(0);
 
-      // Auto-play full song from Cloudinary on reveal
       const fullUrl = result.song?.fullAudioUrl || snippets.full;
       if (fullUrl) {
         setIsFullPlaying(true);
@@ -242,36 +255,57 @@ export default function App() {
     logoutUser();
     setUser(null);
     setCurrentStreak(0);
+    setDailyStreak(0);
+    setTotalPoints(0);
+    setLevel(1);
     setActiveView('game');
   };
 
   const triggerConfetti = () => {
     confetti({
-      particleCount: 100,
-      spread: 70,
+      particleCount: 120,
+      spread: 80,
       origin: { y: 0.6 }
     });
   };
 
+  const handleOpenCompare = (targetUser) => {
+    if (!user) {
+      setShowAuth(true);
+    } else {
+      setCompareTargetUser(targetUser);
+    }
+  };
+
   const renderGameView = () => (
     <>
+      {/* Points Toast Notification */}
+      {pointsToast && (
+        <div className="points-toast-banner">
+          <Zap size={20} />
+          <span>+ {pointsToast.toLocaleString()} Points Earned!</span>
+          {currentStreak > 1 && <span className="toast-streak-badge">🔥 {currentStreak}x Streak Multiplier</span>}
+        </div>
+      )}
+
       {/* Top bar: difficulty tag + selector */}
       <div className="game-topbar">
-        <div className={`difficulty-tag ${currentSong?.difficulty || 'easy'}`}>
-          {currentSong?.difficulty || 'easy'}
+        <div className={`difficulty-indicator ${currentSong?.difficulty || 'easy'}`}>
+          <span className="indicator-dot" />
+          <span>{(currentSong?.difficulty || 'easy').toUpperCase()}</span>
         </div>
 
-        <div className="difficulty-selector">
+        <div className="difficulty-pill-group">
           {[null, 'easy', 'medium', 'hard'].map((d) => (
             <button
               key={d || 'all'}
-              className={`diff-btn ${difficulty === d ? 'active' : ''}`}
+              className={`diff-pill-btn ${difficulty === d ? 'active' : ''}`}
               onClick={() => {
                 setDifficulty(d);
                 loadNewSong(d);
               }}
             >
-              {d || 'All'}
+              {(d || 'ALL').toUpperCase()}
             </button>
           ))}
         </div>
@@ -288,7 +322,7 @@ export default function App() {
 
       {/* Gameplay Area */}
       {gameState === 'playing' || gameState === 'incorrect' ? (
-        <div style={{ marginTop: 24 }}>
+        <div style={{ marginTop: 20 }}>
           {gameState === 'incorrect' && (
             <div className="error-banner">
               <XCircle size={16} />
@@ -313,26 +347,28 @@ export default function App() {
 
           <div className="action-row">
             <button
-              className="btn-primary"
+              className="btn-primary btn-action-guess"
               onClick={handleGuessSubmit}
               disabled={!guessInput.trim()}
             >
-              Submit Guess
+              <CheckCircle size={16} />
+              <span>Submit Guess</span>
             </button>
 
             {currentLevelIndex < SNIPPET_LEVEL_KEYS.length - 1 && (
               <button
-                className="btn-secondary"
+                className="btn-secondary btn-action-skip"
                 onClick={handleSkipToNext}
                 title={`Skip to ${SNIPPET_LEVEL_KEYS[currentLevelIndex + 1]}s snippet`}
               >
-                <SkipForward size={14} style={{ marginRight: 4 }} />
-                Skip to {SNIPPET_LEVEL_KEYS[currentLevelIndex + 1]}s
+                <SkipForward size={16} />
+                <span>Skip to {SNIPPET_LEVEL_KEYS[currentLevelIndex + 1]}s</span>
               </button>
             )}
 
-            <button className="btn-danger" onClick={handleReveal}>
-              Reveal Answer
+            <button className="btn-danger btn-action-reveal" onClick={handleReveal}>
+              <Eye size={16} />
+              <span>Reveal Answer</span>
             </button>
           </div>
         </div>
@@ -349,7 +385,7 @@ export default function App() {
               <h2>{gameState === 'correct' ? 'Correct! 🎵' : 'Song Revealed'}</h2>
               <p>
                 {gameState === 'correct'
-                  ? `You recognized it at ${SNIPPET_LEVEL_KEYS[currentLevelIndex]}s!`
+                  ? `Recognized at ${SNIPPET_LEVEL_KEYS[currentLevelIndex]}s!`
                   : 'Better luck next time!'}
               </p>
             </div>
@@ -387,7 +423,7 @@ export default function App() {
                 </button>
                 {isFullPlaying && (
                   <span style={{ fontSize: 12, color: 'var(--accent)', marginLeft: 8, display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                    <Volume2 size={14} /> Playing from Cloudinary...
+                    <Volume2 size={14} /> Playing full song audio...
                   </span>
                 )}
               </div>
@@ -425,6 +461,9 @@ export default function App() {
         onNavigate={setActiveView}
         user={user}
         currentStreak={currentStreak}
+        dailyStreak={dailyStreak}
+        totalPoints={totalPoints}
+        level={level}
         onOpenAuth={() => setShowAuth(true)}
         onLogout={handleLogout}
         isOpen={sidebarOpen}
@@ -441,7 +480,20 @@ export default function App() {
           )
         )}
 
-        {activeView === 'leaderboard' && <LeaderboardView />}
+        {activeView === 'leaderboard' && (
+          <LeaderboardView
+            currentUser={user}
+            onCompare={handleOpenCompare}
+          />
+        )}
+
+        {activeView === 'friends' && (
+          <FriendsView
+            user={user}
+            onCompare={handleOpenCompare}
+            onOpenAuth={() => setShowAuth(true)}
+          />
+        )}
 
         {activeView === 'profile' && user && <ProfileView />}
 
@@ -456,6 +508,31 @@ export default function App() {
             </button>
           </div>
         )}
+
+        {/* Global Footer */}
+        <footer className="app-footer">
+          <span className="footer-credits">Made by <strong>nao1a</strong></span>
+          <span className="footer-dot">•</span>
+          <a
+            href="https://github.com/Nao1a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            <Github size={13} />
+            <span>GitHub</span>
+          </a>
+          <span className="footer-dot">•</span>
+          <a
+            href="https://portfolio-eta-drab-12.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            <Globe size={13} />
+            <span>Portfolio</span>
+          </a>
+        </footer>
       </main>
 
       {/* Auth Modal */}
@@ -466,8 +543,20 @@ export default function App() {
             setUser(userData);
             if (userData.stats) {
               setCurrentStreak(userData.stats.currentStreak || 0);
+              setDailyStreak(userData.stats.dailyStreak || 0);
+              setTotalPoints(userData.stats.totalPoints || 0);
+              setLevel(userData.stats.level || 1);
             }
           }}
+        />
+      )}
+
+      {/* Head-to-Head Compare Modal */}
+      {compareTargetUser && (
+        <CompareModal
+          targetUser={compareTargetUser}
+          onClose={() => setCompareTargetUser(null)}
+          user={user}
         />
       )}
     </div>

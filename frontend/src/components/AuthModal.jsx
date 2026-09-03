@@ -33,10 +33,10 @@ export default function AuthModal({ onClose, onSuccess }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-card" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2 className="modal-title">{isLogin ? 'Sign In' : 'Create Account'}</h2>
-          <button className="close-btn" onClick={onClose}>
+          <button className="modal-close-btn" onClick={onClose}>
             <X size={18} />
           </button>
         </div>
@@ -58,15 +58,14 @@ export default function AuthModal({ onClose, onSuccess }) {
         </div>
 
         {error && (
-          <div className="error-banner">
-            {error}
-          </div>
+          <div className="auth-error">{error}</div>
         )}
 
         <form onSubmit={handleSubmit} className="auth-form">
-          <div>
-            <label>Username</label>
+          <div className="auth-input-group">
+            <label className="auth-label">Username</label>
             <input
+              className="auth-input"
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -76,9 +75,10 @@ export default function AuthModal({ onClose, onSuccess }) {
           </div>
 
           {!isLogin && (
-            <div>
-              <label>Email (Optional)</label>
+            <div className="auth-input-group">
+              <label className="auth-label">Email (Optional)</label>
               <input
+                className="auth-input"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -87,9 +87,10 @@ export default function AuthModal({ onClose, onSuccess }) {
             </div>
           )}
 
-          <div>
-            <label>Password</label>
+          <div className="auth-input-group">
+            <label className="auth-label">Password</label>
             <input
+              className="auth-input"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -100,9 +101,8 @@ export default function AuthModal({ onClose, onSuccess }) {
 
           <button
             type="submit"
-            className="btn-primary"
+            className="auth-submit-btn"
             disabled={loading}
-            style={{ marginTop: 8, width: '100%' }}
           >
             {loading ? 'Processing...' : isLogin ? 'Sign In' : 'Create Account'}
           </button>
