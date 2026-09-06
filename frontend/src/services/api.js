@@ -1,4 +1,25 @@
-const API_BASE = '/api';
+const rawApiUrl = import.meta.env.VITE_API_URL || '';
+// If VITE_API_URL is provided (e.g., https://your-backend.onrender.com), ensure /api suffix
+export const API_BASE = rawApiUrl
+  ? (rawApiUrl.endsWith('/api') ? rawApiUrl : `${rawApiUrl.replace(/\/+$/, '')}/api`)
+  : '/api';
+
+export function resolveApiUrl(path) {
+  if (!path) return path;
+  if (path.startsWith('http://') || path.startsWith('https://')) return path;
+  const baseUrl = API_BASE.replace(/\/api\/?$/, '');
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return baseUrl ? `${baseUrl}${cleanPath}` : cleanPath;
+}
+
+function formatSnippets(snippets) {
+  if (!snippets || typeof snippets !== 'object') return snippets;
+  const formatted = {};
+  for (const [k, v] of Object.entries(snippets)) {
+    formatted[k] = resolveApiUrl(v);
+  }
+  return formatted;
+}
 
 function getAuthHeader() {
   const token = localStorage.getItem('zefen_token');
@@ -50,6 +71,9 @@ export async function getRandomSong(difficulty = null, excludeIds = []) {
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Failed to fetch random song');
+  if (data.snippets) {
+    data.snippets = formatSnippets(data.snippets);
+  }
   return data;
 }
 
@@ -57,6 +81,9 @@ export async function getSongSnippets(songId) {
   const res = await fetch(`${API_BASE}/songs/${songId}/snippets`);
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Failed to fetch snippets');
+  if (data.snippets) {
+    data.snippets = formatSnippets(data.snippets);
+  }
   return data;
 }
 
@@ -79,6 +106,9 @@ export async function submitGuessApi(songId, guess, snippetLevel, timeSpentSecon
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Failed to submit guess');
+  if (data.song && data.song.fullAudioUrl) {
+    data.song.fullAudioUrl = resolveApiUrl(data.song.fullAudioUrl);
+  }
   return data;
 }
 
@@ -93,6 +123,9 @@ export async function revealAnswerApi(songId, snippetLevel) {
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Failed to reveal answer');
+  if (data.song && data.song.fullAudioUrl) {
+    data.song.fullAudioUrl = resolveApiUrl(data.song.fullAudioUrl);
+  }
   return data;
 }
 
