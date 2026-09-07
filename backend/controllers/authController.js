@@ -18,6 +18,8 @@ async function register(req, res, next) {
     }
 
     const trimmedUsername = username.trim();
+    const lowerUsername = trimmedUsername.toLowerCase();
+
     if (trimmedUsername.length < 3 || trimmedUsername.length > 20) {
       return res.status(400).json({
         success: false,
@@ -34,10 +36,11 @@ async function register(req, res, next) {
       });
     }
 
-    // Case-insensitive duplicate check
-    const existingUser = await User.findOne({
-      username: { $regex: new RegExp(`^${trimmedUsername}$`, 'i') }
-    });
+    // Fast indexed duplicate check (0ms)
+    let existingUser = await User.findOne({ usernameLower: lowerUsername }).lean();
+    if (!existingUser) {
+      existingUser = await User.findOne({ username: trimmedUsername }).lean();
+    }
 
     if (existingUser) {
       return res.status(409).json({
@@ -48,7 +51,7 @@ async function register(req, res, next) {
     }
 
     if (email) {
-      const existingEmail = await User.findOne({ email: email.toLowerCase().trim() });
+      const existingEmail = await User.findOne({ email: email.toLowerCase().trim() }).lean();
       if (existingEmail) {
         return res.status(409).json({
           success: false,
@@ -62,6 +65,7 @@ async function register(req, res, next) {
 
     const newUser = new User({
       username: trimmedUsername,
+      usernameLower: lowerUsername,
       email: email ? email.toLowerCase().trim() : undefined,
       password: hashedPassword,
       stats: {
@@ -69,7 +73,11 @@ async function register(req, res, next) {
         correctGuesses: 0,
         currentStreak: 0,
         bestStreak: 0,
-        gamesPlayed: 0
+        gamesPlayed: 0,
+        totalPoints: 0,
+        level: 1,
+        dailyStreak: 0,
+        bestDailyStreak: 0
       }
     });
 
@@ -106,9 +114,14 @@ async function login(req, res, next) {
       });
     }
 
-    const user = await User.findOne({
-      username: { $regex: new RegExp(`^${username.trim()}$`, 'i') }
-    });
+    const cleanUsername = username.trim();
+    const lowerUsername = cleanUsername.toLowerCase();
+
+    // Fast indexed query
+    let user = await User.findOne({ usernameLower: lowerUsername });
+    if (!user) {
+      user = await User.findOne({ username: cleanUsername });
+    }
 
     if (!user) {
       return res.status(401).json({

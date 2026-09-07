@@ -1,14 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, Music } from 'lucide-react';
-import { searchSongsApi } from '../services/api';
+import { getAllSongsApi, searchSongsApi } from '../services/api';
+import { searchSongsClient } from '../utils/searchSongs';
 
 export default function GuessAutocomplete({ value, onChange, onSelect, onSubmit }) {
   const [suggestions, setSuggestions] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [isLoading, setIsLoading] = useState(false);
+  const [allSongs, setAllSongs] = useState([]);
   const containerRef = useRef(null);
   const inputRef = useRef(null);
+
+  // Preload songs on component mount for instant 0ms searches
+  useEffect(() => {
+    getAllSongsApi().then((songs) => {
+      if (songs && songs.length > 0) {
+        setAllSongs(songs);
+      }
+    });
+  }, []);
 
   useEffect(() => {
     if (!value || value.trim().length === 0) {
@@ -18,22 +28,31 @@ export default function GuessAutocomplete({ value, onChange, onSelect, onSubmit 
       return;
     }
 
-    setIsLoading(true);
+    const trimmed = value.trim();
+
+    // 1. Instant client-side search (0ms)
+    if (allSongs && allSongs.length > 0) {
+      const results = searchSongsClient(allSongs, trimmed);
+      setSuggestions(results);
+      setIsOpen(results.length > 0);
+      setSelectedIndex(-1);
+      return;
+    }
+
+    // 2. Fallback to API if catalog is still downloading
     const handler = setTimeout(async () => {
       try {
-        const results = await searchSongsApi(value.trim());
+        const results = await searchSongsApi(trimmed);
         setSuggestions(results || []);
         setIsOpen((results && results.length > 0) || false);
         setSelectedIndex(-1);
       } catch (err) {
         setSuggestions([]);
-      } finally {
-        setIsLoading(false);
       }
-    }, 150);
+    }, 100);
 
     return () => clearTimeout(handler);
-  }, [value]);
+  }, [value, allSongs]);
 
   useEffect(() => {
     function handleClickOutside(e) {

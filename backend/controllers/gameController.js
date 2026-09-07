@@ -208,7 +208,7 @@ async function submitGuess(req, res, next) {
         album: song.album,
         year: song.year,
         albumArt: song.albumArt || null,
-        fullAudioUrl: `/api/songs/${song.id}/audio/full`,
+        fullAudioUrl: (song.snippets && song.snippets.full) ? song.snippets.full : `/api/songs/${song.id}/audio/full`,
         difficulty: song.difficulty
       },
       userStats: userStatsResponse
@@ -287,7 +287,7 @@ async function revealAnswer(req, res, next) {
         album: song.album,
         year: song.year,
         albumArt: song.albumArt || null,
-        fullAudioUrl: `/api/songs/${song.id}/audio/full`,
+        fullAudioUrl: (song.snippets && song.snippets.full) ? song.snippets.full : `/api/songs/${song.id}/audio/full`,
         difficulty: song.difficulty
       },
       message: 'Better luck next time!'

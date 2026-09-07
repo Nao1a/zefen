@@ -80,7 +80,11 @@ loadSongsMetadata();
 async function startServer() {
   try {
     await mongoose.connect(MONGODB_URI, {
-      serverSelectionTimeoutMS: 5000
+      serverSelectionTimeoutMS: 5000,
+      maxPoolSize: 10,
+      minPoolSize: 2,
+      socketTimeoutMS: 45000,
+      autoIndex: true
     });
     console.log(`Connected successfully to MongoDB at ${MONGODB_URI}`);
   } catch (err) {

@@ -87,6 +87,44 @@ export async function getSongSnippets(songId) {
   return data;
 }
 
+let cachedSongsList = null;
+
+export async function getAllSongsApi() {
+  if (cachedSongsList && cachedSongsList.length > 0) {
+    return cachedSongsList;
+  }
+  try {
+    const saved = localStorage.getItem('zefen_cached_songs');
+    if (saved) {
+      cachedSongsList = JSON.parse(saved);
+    }
+  } catch (e) {}
+
+  try {
+    const res = await fetch(`${API_BASE}/songs?limit=500`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data.songs && Array.isArray(data.songs)) {
+        cachedSongsList = data.songs;
+        try {
+          localStorage.setItem('zefen_cached_songs', JSON.stringify(data.songs));
+        } catch (e) {}
+        return cachedSongsList;
+      }
+    }
+  } catch (err) {
+    // If offline/error, return any cached copy
+  }
+  return cachedSongsList || [];
+}
+
+export async function pingServerApi() {
+  try {
+    const baseUrl = API_BASE.replace(/\/api\/?$/, '');
+    await fetch(`${baseUrl}/health`, { method: 'GET' });
+  } catch (e) {}
+}
+
 export async function searchSongsApi(query) {
   if (!query || query.trim().length === 0) return [];
   const res = await fetch(`${API_BASE}/songs/search?q=${encodeURIComponent(query)}`);
@@ -147,13 +185,23 @@ export async function getUserHistoryApi(limit = 20) {
   return data;
 }
 
+const leaderboardCache = new Map();
+
 export async function getLeaderboardApi(limit = 100, type = 'global') {
+  const cacheKey = `${type}_${limit}`;
+  const cached = leaderboardCache.get(cacheKey);
+  const now = Date.now();
+  if (cached && (now - cached.timestamp < 15000)) {
+    return cached.data;
+  }
+
   const queryParams = new URLSearchParams({ limit, type });
   const res = await fetch(`${API_BASE}/leaderboard?${queryParams.toString()}`, {
     headers: getAuthHeader()
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || 'Failed to fetch leaderboard');
+  leaderboardCache.set(cacheKey, { data, timestamp: now });
   return data;
 }
 

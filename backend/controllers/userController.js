@@ -116,10 +116,18 @@ async function searchUsers(req, res, next) {
     const currentUser = currentUserId ? await User.findById(currentUserId) : null;
     const friendSet = new Set((currentUser?.friends || []).map(id => id.toString()));
 
-    const dbUsers = await User.find({
-      _id: { $ne: currentUserId },
-      username: { $regex: query, $options: 'i' }
-    }).limit(10).lean();
+    const queryLower = query.toLowerCase();
+    const filter = {
+      usernameLower: { $regex: '^' + queryLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') }
+    };
+    if (currentUserId) {
+      filter._id = { $ne: currentUserId };
+    }
+
+    const dbUsers = await User.find(filter)
+      .select('username stats')
+      .limit(10)
+      .lean();
 
     let results = dbUsers.map(u => {
       const stats = u.stats || {};

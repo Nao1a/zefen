@@ -17,6 +17,8 @@ import {
   submitGuessApi,
   revealAnswerApi,
   getUserProfileApi,
+  getAllSongsApi,
+  pingServerApi,
   logoutUser
 } from './services/api';
 import { audioPlayer } from './utils/audioPlayer';
@@ -59,6 +61,11 @@ export default function App() {
   const [compareTargetUser, setCompareTargetUser] = useState(null);
 
   useEffect(() => {
+    // 1. Send lightweight ping to wake up server on free tier
+    pingServerApi();
+    // 2. Preload song catalog into client memory
+    getAllSongsApi();
+
     const token = localStorage.getItem('zefen_token');
     if (token) {
       getUserProfileApi()

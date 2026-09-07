@@ -110,7 +110,7 @@ function getRandomSong(difficulty = null, excludeIds = []) {
   return {
     id: targetSong.id,
     difficulty: targetSong.difficulty,
-    snippets: {
+    snippets: targetSong.snippets || {
       '1.0': `/api/songs/${targetSong.id}/audio/1.0`,
       '2.0': `/api/songs/${targetSong.id}/audio/2.0`,
       '4.0': `/api/songs/${targetSong.id}/audio/4.0`,

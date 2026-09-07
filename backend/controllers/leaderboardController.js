@@ -1,90 +1,52 @@
-const LeaderboardCache = require('../models/LeaderboardCache');
 const User = require('../models/User');
 
-const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
+let memoryLeaderboardCache = null;
+let lastCacheTime = 0;
+const CACHE_TTL_MS = 60 * 1000; // 60 seconds in-memory cache
 
-async function recalculateLeaderboard() {
-  const allUsers = await User.find({ 'stats.totalGuesses': { $gt: 0 } }).lean();
-
-  let formattedUsers = allUsers.map((user) => {
-    const total = user.stats ? user.stats.totalGuesses || 0 : 0;
-    const correct = user.stats ? user.stats.correctGuesses || 0 : 0;
-    const currentStreak = user.stats ? user.stats.currentStreak || 0 : 0;
-    const bestStreak = user.stats ? user.stats.bestStreak || 0 : 0;
-    const totalPoints = user.stats ? user.stats.totalPoints || 0 : 0;
-    const level = user.stats ? user.stats.level || 1 : 1;
-    const accuracy = total > 0 ? parseFloat((correct / total).toFixed(2)) : 0;
-
-    return {
-      userId: user._id,
-      username: user.username,
-      correctGuesses: correct,
-      totalGuesses: total,
-      accuracy,
-      currentStreak,
-      bestStreak,
-      totalPoints,
-      level
-    };
-  });
-
-  // Sort by totalPoints descending, then accuracy descending, then bestStreak descending
-  formattedUsers.sort((a, b) => {
-    if (b.totalPoints !== a.totalPoints) {
-      return b.totalPoints - a.totalPoints;
-    }
-    if (b.accuracy !== a.accuracy) {
-      return b.accuracy - a.accuracy;
-    }
-    return b.bestStreak - a.bestStreak;
-  });
-
-  const top100 = formattedUsers.slice(0, 100).map((player, index) => ({
-    ...player,
-    rank: index + 1
-  }));
-
-  const cacheDoc = await LeaderboardCache.findOneAndUpdate(
-    { cacheKey: 'current' },
-    {
-      topPlayers: top100,
-      lastUpdatedAt: new Date(),
-      totalPlayersOnLeaderboard: formattedUsers.length
-    },
-    { upsert: true, new: true }
-  );
-
-  return cacheDoc;
-}
-
-async function getLeaderboardData() {
+async function getTopGlobalLeaderboard(limit = 100) {
   const isMongoConnected = require('mongoose').connection.readyState === 1;
-
   if (!isMongoConnected) {
-    return {
-      topPlayers: [],
-      lastUpdatedAt: new Date(),
-      totalPlayersOnLeaderboard: 0
-    };
+    return memoryLeaderboardCache || [];
+  }
+
+  const now = Date.now();
+  if (memoryLeaderboardCache && (now - lastCacheTime < CACHE_TTL_MS)) {
+    return memoryLeaderboardCache.slice(0, limit);
   }
 
   try {
-    let cache = await LeaderboardCache.findOne({ cacheKey: 'current' });
+    // Fast indexed query on totalPoints
+    const topUsers = await User.find({ 'stats.totalGuesses': { $gt: 0 } })
+      .select('username stats')
+      .sort({ 'stats.totalPoints': -1, 'stats.bestStreak': -1 })
+      .limit(100)
+      .lean();
 
-    const now = new Date().getTime();
-    const isStale = !cache || (now - new Date(cache.lastUpdatedAt).getTime()) > CACHE_TTL_MS;
+    const formatted = topUsers.map((user, idx) => {
+      const s = user.stats || {};
+      const total = s.totalGuesses || 0;
+      const correct = s.correctGuesses || 0;
+      return {
+        rank: idx + 1,
+        userId: user._id.toString(),
+        username: user.username,
+        totalPoints: s.totalPoints || 0,
+        level: s.level || 1,
+        accuracy: total > 0 ? parseFloat((correct / total).toFixed(2)) : 0,
+        currentStreak: s.currentStreak || 0,
+        bestStreak: s.bestStreak || 0,
+        correctGuesses: correct,
+        totalGuesses: total
+      };
+    });
 
-    if (isStale) {
-      cache = await recalculateLeaderboard();
-    }
-
-    return cache;
+    memoryLeaderboardCache = formatted;
+    lastCacheTime = now;
+    return formatted.slice(0, limit);
   } catch (err) {
-    return {
-      topPlayers: [],
-      lastUpdatedAt: new Date(),
-      totalPlayersOnLeaderboard: 0
-    };
+    console.error('Leaderboard query error:', err.message);
+    return memoryLeaderboardCache || [];
   }
 }
 
@@ -93,20 +55,17 @@ async function getLeaderboard(req, res, next) {
     const limitQuery = parseInt(req.query.limit, 10) || 100;
     const limit = Math.min(Math.max(limitQuery, 1), 100);
 
-    const cache = await getLeaderboardData();
-    let topPlayers = cache.topPlayers;
+    let topPlayers = await getTopGlobalLeaderboard(100);
 
-    // Filter by friends if type === 'friends' and req.userId exists and mongo is connected
+    // Filter by friends if requested
     if (req.query.type === 'friends' && req.userId && require('mongoose').connection.readyState === 1) {
       try {
-        const currentUser = await User.findById(req.userId).populate('friends').lean();
+        const currentUser = await User.findById(req.userId).select('friends').lean();
         if (currentUser) {
-          const friendIds = new Set((currentUser.friends || []).map((f) => f._id.toString()));
+          const friendIds = new Set((currentUser.friends || []).map((f) => f.toString()));
           friendIds.add(currentUser._id.toString());
 
-          topPlayers = topPlayers.filter((player) =>
-            friendIds.has(player.userId.toString())
-          );
+          topPlayers = topPlayers.filter((player) => friendIds.has(player.userId));
         }
       } catch (e) {}
     }
@@ -115,8 +74,8 @@ async function getLeaderboard(req, res, next) {
 
     return res.status(200).json({
       leaderboard: sliced,
-      generatedAt: cache.lastUpdatedAt,
-      totalPlayers: cache.totalPlayersOnLeaderboard
+      generatedAt: new Date(lastCacheTime || Date.now()),
+      totalPlayers: topPlayers.length
     });
   } catch (err) {
     next(err);
@@ -126,11 +85,9 @@ async function getLeaderboard(req, res, next) {
 async function getUserRank(req, res, next) {
   try {
     const { userId } = req.params;
-    const cache = await getLeaderboardData();
+    const topPlayers = await getTopGlobalLeaderboard(100);
 
-    const playerInLeaderboard = cache.topPlayers.find(
-      (p) => p.userId.toString() === userId.toString()
-    );
+    const playerInLeaderboard = topPlayers.find((p) => p.userId === String(userId));
 
     if (playerInLeaderboard) {
       return res.status(200).json({
@@ -144,17 +101,17 @@ async function getUserRank(req, res, next) {
         bestStreak: playerInLeaderboard.bestStreak,
         totalPoints: playerInLeaderboard.totalPoints || 0,
         level: playerInLeaderboard.level || 1,
-        totalPlayersRanked: cache.totalPlayersOnLeaderboard
+        totalPlayersRanked: topPlayers.length
       });
     }
 
-    const user = await User.findById(userId);
+    const user = await User.findById(userId).select('username stats').lean();
     return res.status(200).json({
       userId,
       username: user ? user.username : 'unknown_user',
       rank: null,
       message: 'User is not in top 100',
-      totalPlayersRanked: cache.totalPlayersOnLeaderboard
+      totalPlayersRanked: topPlayers.length
     });
   } catch (err) {
     next(err);
@@ -163,6 +120,5 @@ async function getUserRank(req, res, next) {
 
 module.exports = {
   getLeaderboard,
-  getUserRank,
-  recalculateLeaderboard
+  getUserRank
 };

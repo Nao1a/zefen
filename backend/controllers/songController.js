@@ -123,7 +123,7 @@ function getSongSnippets(req, res, next) {
 
     return res.status(200).json({
       songId: song.id,
-      snippets: {
+      snippets: song.snippets || {
         '1.0': `/api/songs/${song.id}/audio/1.0`,
         '2.0': `/api/songs/${song.id}/audio/2.0`,
         '4.0': `/api/songs/${song.id}/audio/4.0`,
